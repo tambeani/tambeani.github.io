@@ -1,0 +1,181 @@
+{
+    "assets": { 
+        "current": [
+            {
+                "name": "Cash",
+                "description": "",
+                "values": [
+                    {
+                        "year": 2023,
+                        "amount": 7000
+                    },
+                    {
+                        "year": 2024,
+                        "amount": "NA"
+                    }
+                ]
+            },
+            {
+                "name": "Temporary Investments",
+                "description": ""
+            },
+            {
+                "name": "Accounts Receivables",
+                "description": "Accounts receivable refers to the amounts owed to a business by its customers or clients for goods or services that have been delivered or provided on credit. In other words, it represents the money that the business expects to receive from its customers in the future.Accounts receivable are considered assets on the balance sheet because they represent future cash inflows"
+            },
+            {
+                "name": "Prepaid Expenses",
+                "description": "Prepaid expenses are considered assets because they represent resources that a company has already paid for but has not yet consumed or used up."
+            }
+        ],
+        "fixed": [
+            {
+                "name": "Property"
+            },
+            {
+                "name": "Land"
+            }
+        ],
+        "other": []
+    },
+    "liabilities": [{
+
+    }],
+    "equities":[{
+
+    }],
+    "financials": {
+        "expenses": [
+
+            {
+                "name": "Housing",
+                "entries": [
+                    {
+                        "date": "02/27/2024",
+                        "value": 640
+                    },
+                    {
+                        "date": "02/27/2024",
+                        "value": 150
+                    },
+                    {
+                        "date": "03/27/2024",
+                        "value": 640
+                    }
+                ]
+            },
+            {
+                "name": "Travel",
+                "entries": [
+                    {
+                        "date": "02/17/2024",
+                        "description": "Uber",
+                        "value": 17.50
+                    },
+                    {
+                        "date": "02/16/2024",
+                        "description": "Uber - Weekly",
+                        "value": 80
+                    },
+                    {
+                        "date": "02/09/2024",
+                        "description": "Uber - Weekly",
+                        "value": 100
+                    },
+                    {
+                        "date": "02/01/2024",
+                        "description": "Uber - Weekly",
+                        "value": 100
+                    },
+                    {
+                        "date": "02/01/2024",
+                        "description": "Uber - Weekly",
+                        "value": 100
+                    }
+                ]
+            },
+            {
+                "name": "Meals",
+                "entries": [
+                    {
+                        "date": "02/18/2024",
+                        "description": "Energy Drink",
+                        "value": 3.25
+                    },
+                    {
+                        "date": "02/18/2024",
+                        "description": "Curry Market",
+                        "value": 6.75
+                    },
+                    {
+                        "date": "02/18/2024",
+                        "description": "Cookies @ISEC",
+                        "value": 2.75
+                    },
+                    {
+                        "date": "02/17/2024",
+                        "description": "Chipotle",
+                        "value": 24.75
+                    },
+                    {
+                        "date": "02/17/2024",
+                        "description": "Sweetgreen Bowl",
+                        "value": 15
+                    },
+                    {
+                        "date": "02/18/2024",
+                        "description": "Wings Over",
+                        "value": 14
+                    },
+                    {
+                        "date": "02/18/2024",
+                        "description": "Curry Market",
+                        "value": 7
+                    },
+                    {
+                        "date": "02/16/2024",
+                        "description": "Weekly Meals",
+                        "value": 250
+                    },
+                    {
+                        "date": "02/09/2024",
+                        "description": "Weekly Meals",
+                        "value": 250
+                    },
+                    {
+                        "date": "02/01/2024",
+                        "description": "Weekly Meals",
+                        "value": 250
+                    },
+                    {
+                        "date": "02/25/2024",
+                        "description": "Weekly Meals",
+                        "value": 250
+                    }
+                ]
+            },
+            {
+                "name": "Savings",
+                "entries": [
+                    {
+                        "date": "02/01/2024",
+                        "value": -200
+                    },
+                    {
+                        "date": "02/09/2024",
+                        "value": -200
+                    },
+                    {
+                        "date": "02/16/2024",
+                        "value": -200
+                    }
+                    ,
+                    {
+                        "date": "02/25/2024",
+                        "value": -200
+                    }
+                ]
+            }
+        ]
+    }
+}
