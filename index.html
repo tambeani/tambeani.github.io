@@ -1,68 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
 
-    <title>Budget Planner</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a href="/" class="navbar-brand" type="button" data-bs-toggle="collapse"
-          >Planner</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="balance-sheet.html"
-                >Balance Sheet</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="financials.html"
-                >Financials</a
-              >
-            </li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="box">
+            <h3>Q. There are 3 ways to create a Controller in Spring Framework. One way is shown !</h3>
+            <div class="box border border-dark p-3">
+                public class UserController extends AbstractController {
+
+                }
+            </div>
+            <div class="box border border-dark p-3">
+                @Controller<br>
+                public class UserController {
+
+                }
+            </div>
+            <div class="box border border-dark p-3">
+                @RestController<br>
+                public class UserController {
+
+                }
+            </div>
+            <h3 class="mt-3">Q. Can you deploy applications outside of webapps folder?</h3>
+            <div class="box border border-dark p-3">
+                &lt;Context docBase="/path/to/your/web/application" /&gt;
+            </div>
+
+            <h3 class="mt-3">
+                Assume the URL pattern is register.do. Which line may cause an error If ANY. (Multiple
+                Choice Question - SELECT ONLY 1 eptien).
+            </h3>
+            <div class="box border border-dark p-3">
+                &lt;form action="register.do"&gt;<br>
+                username: &lt;input type="text" name="t1"&gt;<br>
+                password: &lt;input type="text" name="t2"&gt;<br>
+                &lt;input type="submit" value="Register"&gt;<br>
+                &lt;/form&gt;
+                <br><br>
+                public class RegisterServlet{<br>
+                <span style="color: red">@Override</span><br>
+                public void doGet(HttpServletRequest response, HttpServletResponse request) throws ServletException,<br>
+                IOException{<br>
+                PrintWriter out = request.getWriter();<br>
+                String t1 = response.getParameter("t1");<br>
+                //NO Error in code<br>
+                }<br>
+                }<br>
+            </div>
+            <h3 class="mt-3">
+                Q. To map BookControlier to handie all the requests below, which Controller HandlerMapping can NOT be
+                used?.
+            </h3>
+            <div class="box border border-dark p-3">
+                http://hostName:port/MyAppName/book/add/romance/12345678.htm <br>
+                http://hostName:port/MyAppName/book/add/science/12345678.htm <br>
+                http://hostName:port/MyAppName/book/delete/12345678.htm <br>
+                http://hostName:port/MyAppName/book/12345678.htm <br>
+                <br><br>
+                <span style="color: red">a. BeanNameUrlHandlerMapping</span><br>
+                b. SimpleUrlHandlerMapping<br>
+                c. ControllerClassNameHandlerMapping<br>
+                d. @RequestMapping<br>
+                e. @GetMapping<br>
+                f. @PostMapping<br>
+            </div>
+            <h3 class="mt-3">
+                Q. How can I get an instance of the following class using Dl/loC in a Spring Controlier? Assume «bean
+                id="petservice"
+                *class«"PetStoreService"/&gt; was defined in services.
+            </h3>
+            <div class="box border border-dark p-3">
+                ApplicationContext context = new ClassPathXmlApplicationContext("services.xml");<br>
+                OrderService orderService = context.getBean(OrderService.class);<br>
+            </div>
+            <h3 class="mt-3">
+                Q. Assume «bean id-"perservice" ciass="PetStoreService" scope"request"/> was defined in
+                applicationContextxml. Fix the error in the code.
+            </h3>
+            <div class="box border border-dark p-3">
+                @Controller<br>
+                public class PetController {<br>
+
+                @GetMapping("*/pet.htm*")<br>
+                public String handleGet(<span style="color: red">@Autowired PetStoreService petService</span>) {<br>
+                return "pet-view";<br>
+                }<br>
+                }<br>
+            </div>
+
+            <h3>Q. Filter code</h3>
+            <div class="box border border-dark p-3">
+                import javax.servlet.*;<br>
+                import javax.servlet.http.HttpServletRequest;<br>
+                import javax.servlet.http.HttpServletResponse;<br>
+                import java.io.IOException;<br>
+                <br>
+                public class MyClass implements Filter {<br>
+
+                @Override<br>
+                public void init(FilterConfig filterConfig) throws ServletException {<br>
+                // Initialization code here<br>
+                }<br>
+                <br>
+                @Override<br>
+                public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws<br>
+                IOException, ServletException {<br>
+                // Code to perform tasks on the request or response<br>
+                HttpServletRequest httpRequest = (HttpServletRequest) request;<br>
+                HttpServletResponse httpResponse = (HttpServletResponse) response;<br>
+                <br>
+                // Example: Logging the request URI<br>
+                System.out.println("Request URI: " + httpRequest.getRequestURI());<br>
+                <br>
+                // Example: Setting response headers for compression<br>
+                httpResponse.setHeader("Content-Encoding", "gzip");<br>
+                <br>
+                // Pass the request/response along the filter chain<br>
+                chain.doFilter(request, response);<br>
+                <br>
+                // Code to perform tasks after the response has been processed<br>
+                // Example: Auditing<br>
+                System.out.println("Response status code: " + httpResponse.getStatus());<br>
+                }<br>
+
+                @Override<br>
+                public void destroy() {<br>
+                // Cleanup code here<br>
+                }<br>
+                }<br>
+                <br>
+            </div>
+
+            <h3>Q. Multipart File</h3>
+            <div class="box border border-dark p-3">
+                public String showSuccessPostHandler(@ModelAttribute("ta") TA ta, BindingResult result,
+                SessionStatus<br>
+                status) {<br>
+                MultipartFile tempPhoto = ta.getPhoto();<br>
+                File photoFile = new File("C:\\ta_uploads\\" + ta.getNuid() + ".jpg");<br>
+                <br>
+                try {<br>
+                // Copy the contents of the uploaded photo to the file<br>
+                <span style="color: red">tempPhoto.transferTo(photoFile);</span><br>
+                } catch (IOException e) {<br>
+                e.printStackTrace(); // Handle the exception properly<br>
+                }<br>
+                <br>
+                // Perform other processing as needed<br>
+                <br>
+                return "ta-success";<br>
+                }<br>
+            </div>
+            <h3>Q. JSP Form errors</h3>
+
+            <div class="box border border-dark p-3">
+                &lt;form:form modelAttribute="excelfile" enctype="multipart/form-data"&gt;<br>
+                Excel File Containing Input Data:<br>
+                &lt;input type="file" name="excelfile" /&gt;<br>
+                <span style="color: red">&lt;form:errors path="excelfile" /&gt;</span><br>
+                &lt;/form:form&gt;<br>
+            </div>
+
+            <h3>Q. Hibernate Fillup</h3>
+
+            <div class="box border border-dark p-3">
+
+                Developers often wish to share a <strong>connection pool</strong> between all of the application's
+                current instances.
+            </div>
+    </div>
+
+    <div class="container">
+
+        <h3 class="mt-3">Q. forEach loop</h3>
+
+        <div class="box">
+            <img src="./images/image.png" style="max-width: 100%; height: auto;">
         </div>
-      </div>
-    </nav>
-    <div id="root" class="container"></div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="./js/balance-sheet.js"></script>
-  </body>
+    </div>
+    <!-- Your content goes here -->
+
+    <!-- Add Bootstrap JavaScript (optional) -->
+    <!-- You may need this if you're using Bootstrap components that require JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
